@@ -88,7 +88,7 @@ public class SesameKnowledgeStoreTest {
 			String assertType) throws RepositoryException, RDFParseException,
 			IOException {
 		SesameKnowledgeStore ks = new SesameKnowledgeStore(new SailRepository(new MemoryStore()));
-		ks.addSensor(new Sensor(sensorId, new Property(propertyId, new FeatureOfInterest(featureId))));
+		ks.addSensor(new Sensor(sensorId, (URI) new Property(propertyId, new FeatureOfInterest(featureId))));
 		
 		RDFEntityRepresenter er = new RDFEntityRepresenter();
 		
